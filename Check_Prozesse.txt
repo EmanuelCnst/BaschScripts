@@ -1,0 +1,47 @@
+#!/bin/bash 
+
+# Name: check_process.sh 
+
+# ----------------- 
+
+# SYNOPSIS: checkprocess 
+
+# Description: Check if a process is running 
+
+#Check if a Process is already running 
+
+# Author Emanuel Constanti 
+
+# Datum 12.09.2021 
+
+clear 
+
+echo "------------------------------------------------" 
+
+echo "" 
+
+echo "Bitte geben Sie den Prozess ein den Sie suchen!" 
+
+echo "------------------------------------------------" 
+
+  
+
+#Input is a local variable 
+
+  
+
+read input 
+
+  
+
+if [ `ps -ef | grep ${input} | grep -v grep | wc -l` -eq 0 ]; then 
+
+        echo "" 
+
+        echo " This process is curently not runnning." 
+
+else 
+
+        echo "This process is running hurray" 
+
+fi 

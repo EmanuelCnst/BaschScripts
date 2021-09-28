@@ -1,0 +1,51 @@
+#!/bin/bash 
+
+# 
+
+# Name: hello.sh - Hello World Script 
+
+# ----------------- 
+
+# SYNOPSIS: 
+
+# Description: Dieses Scrupt zeigt veriable auf 
+
+# Autoren: Emanuel Constanti 
+
+# Version: 1.0 
+
+# Datum: 14.09.2021 
+
+## 
+
+# Name: hello.sh - Hello World Script 
+
+# ----------------- 
+
+# SYNOPSIS: 
+
+# Description: Dieses Scrupt zeigt veriable auf 
+
+# Autoren: Emanuel Constanti 
+
+# Version: 1.0 
+
+# Datum: 14.09.2021 
+
+# 
+
+# wir verwenden eine Variable 
+
+a="Hallo Leute" 
+
+echo "Die Variable a beinhaltet" 
+
+echo $a 
+
+  
+
+b="Guten Abend" 
+
+echo "Die Variable b beinhaltet" 
+
+echo $b 
