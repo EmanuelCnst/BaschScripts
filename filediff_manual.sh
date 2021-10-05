@@ -1,4 +1,4 @@
-  GNU nano 4.8                                      filedif_manual.sh                                                # Aufruf: filedif_manuel.sh file1 file2
+#!/bin/bash                                    filedif_manual.sh                                                # Aufruf: filedif_manuel.sh file1 file2
 # Parameter : file1 and  file2
 # Autor: Emanuel Constanti
 # Version: 3.2.3
