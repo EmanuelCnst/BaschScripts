@@ -10,6 +10,11 @@
 # Datum: 22.10.2021
 
 # REGEX nimmt nur die Zahl 2 von Export Small zweiter teil printet nur die zwei gewünschten spalten aus und gibt mit length 7 die hauptgruppen aus. 
- awk '$1 ~ /^[0-2]$/' ExportSmall.spl | \
-  awk -F"'" '{print $2,"     ",$4}' | \
-   awk 'length($1)==7' 
+input=$1
+output=$2
+
+ awk '$1 ~ /^[0-2]$/ '  $input | \
+ awk '$2 ~ /^[0-25]$/'             | \
+ awk -F"'" '{print $2,"     ",$4}' | \
+ awk 'length($1)==7' > $output
+ 
