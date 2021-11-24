@@ -1,0 +1,49 @@
+#!/bin/bash
+# Autoren: Emanuel Constanti
+# Version: 1.0 
+# Datum: 24.11.2021
+
+echo "Nummer von argumenten: $#"
+if [[ $# -ne 1 ]]
+then
+	echo "Wir brauchenn ein file um zu töten!"
+	exit 1
+fi
+
+if [[ -f $1 ]]
+then
+	echo "File $1 loaded."
+else
+	echo "$1 doesn't exist!"
+	exit 1
+fi
+
+echo "Willkommen zu dem tödlichsten Game ever!"
+
+echo "Waffe geladen!"
+BULLET=$((RANDOM%6+1)) 
+
+echo "Zylinder wird gedrehdt!"
+CYLINDER=$((RANDOM%6+1))
+
+BLAMS=0
+while [[ $BLAMS -lt 1 ]] ; do
+	echo "Drücken Sie eine belibige Taste um den zylinder zu drehen, oder drücken Sie CTRL + C wenn Sie ein Huhn sind."
+	read -sn 1
+	
+	if [[ $CYLINDER -eq $BULLET ]]; then
+		echo "Patrone ist im Loch $BULLET."
+		echo "Zylinder ist an der Position $CYLINDER."
+		echo "BOOM;!"
+		echo "$1's File wurde getötet."
+		BLAMS=$((BLAMS+1))
+		rm -rf $1
+	else
+		echo "Click. $1 lebt, um einen anderen Zyklus zu erleben"
+		echo "Zylinder ist an Position $CYLINDER."
+	fi
+	
+	CYLINDER=$(((CYLINDER%6)+1))
+done
+
+echo "Danke fürs mit spielen!"
